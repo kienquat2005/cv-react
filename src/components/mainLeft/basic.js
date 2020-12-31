@@ -1,5 +1,6 @@
 import { Button, makeStyles } from '@material-ui/core'
 import { Context } from 'contexts/context'
+import Right from '../mainRight/right'
 import React, { useContext } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Education from './Education'
@@ -140,6 +141,7 @@ function Basic() {
           </div>
         </Router>
       </div>
+      <Right />
     </div>
   )
 }

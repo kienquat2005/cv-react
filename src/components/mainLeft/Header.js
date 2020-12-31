@@ -37,14 +37,13 @@ function Header() {
                 variant="outlined"
                 onBlur={onBlur} 
                 defaultValue = {content.header.name}
-                inputRef ={register({required: true, maxLength: 100})}
+                inputRef ={register}
                 style={style}
                 onChange={handleSubmit(onSubmit)}
                 />
-                {errors.name && errors.name.type ==="required" && ( <p>This is required</p>)}
-                {errors.name && errors.name.type ==="maxLength"}
+            
                 <form onChange={handleSubmit(onSubmit)}>
-                    <select name="gender" style={style} ref={register({required: true})} className='gender'>
+                    <select name="gender" style={style} ref={register} className='gender'>
                         <option>Gender</option>
                         <option value="Female">Female</option>
                         <option value="Male">Male</option>
@@ -58,46 +57,42 @@ function Header() {
                 placeholder="bluebill1049@gamil.com"
                 variant="outlined" 
                 defaultValue = {content.header.email}
-                inputRef ={register({required: true, pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/})}
+                inputRef ={register}
                 style={style}
                 onChange={handleSubmit(onSubmit)}
                 />
-                {errors.email && errors.email.type ==="required" && ( <p>This is required</p>)}
-                {errors.email && errors.email.type ==="pattern" && ( <p>Email is not valid, please re-enter your email</p>)}
+               
                 <TextField 
                 id="outlined-basic" 
                 label="Phone" 
                 name="phone"
                 variant="outlined"
                 defaultValue={content.header.phone}
-                inputRef ={register({required:true ,pattern: /^\d{10,11}$/})}
+                inputRef ={register}
                 style={style}
                 onChange={handleSubmit(onSubmit)}
                 />
-                {errors.phone && errors.phone.type === "required" && (<p>This is required</p>)}
-                {errors.phone && errors.phone.type ==="pattern" && (<p>Phone number must be 10 - 11 digits long</p>) }
+                
                 <TextField 
                 id="outlined-basic" 
                 label="Address" 
                 name = "address"
                 variant="outlined" 
                 defaultValue={content.header.address}
-                inputRef={register({required: true})}
+                inputRef={register}
                 style={style}
                 onChange={handleSubmit(onSubmit)}
                 />
-                {errors.address && errors.address.type === "required" && (<p>This is a required</p>)}
                 <TextField 
                 id="outlined-basic" 
                 label="City" 
                 variant="outlined" 
                 name="city"
                 defaultValue={content.header.city}
-                inputRef={register({required: true})}
+                inputRef={register}
                 style={style}
                 onChange={handleSubmit(onSubmit)}
                 />
-                 {errors.city && errors.city.type === "required" && (<p>This is a required</p>)}
                <Button variant="contained"  style={style} to= "/basic/education" component={Link}>Next</Button>
                <Button variant="contained" onClick={handleDeleteHeader}  style={style} >Delete</Button>
             </form>

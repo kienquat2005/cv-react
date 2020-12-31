@@ -1,12 +1,12 @@
 
 const data = {
   header: {
-    name: "Tran Thi Kim Thanh",
-    email: "kimthanh99315@gmail.com",
-    gender: "Nữ",
-    phone: "036759279",
-    address: "29 Phạm Như Xương",
-    city:'Da Nang'
+    name: "Nguyen Trinh Nhat Thanh",
+    email: "nhatthanh@gmail.com",
+    gender: "Mail",
+    phone: "03121212",
+    address: "Duy Xuyen",
+    city:'Quang Nam'
   },
   education: {
     institition: "Đại Học Sư Phạm Đà Nẵng",

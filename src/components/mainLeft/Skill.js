@@ -17,8 +17,15 @@ function Skill() {
         removeData();
         updateSkillData(data)
         setText('Update');
-
-        
+    }
+    
+    function sendCV() {
+        var allCV = JSON.parse(localStorage.getItem("allCV"))
+        allCV.push(content);
+        localStorage.setItem('allCV', JSON.stringify(allCV));
+        alert('My CV has been sent successfully! Please wait for a response from recruiter');
+        localStorage.removeItem('dataLocal');
+        window.location.href = '/basic'
     }
     return (
         <div className="skill">
@@ -73,6 +80,15 @@ function Skill() {
                 disableElevation
                 style={style}>
                     {Text}
+
+                </Button>
+                <Button   
+                variant="contained" 
+                color="secondary" 
+                disableElevation
+                style={style}
+                onClick={sendCV}>
+                    Send CV
 
                 </Button>
             </form>

@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.1",
+    "@material-ui/data-grid": "^4.0.0-alpha.13",
     "@material-ui/icons": "^4.11.2",
     "@progress/kendo-drawing": "^1.9.3",
     "@progress/kendo-licensing": "^1.1.0",
@@ -19,7 +20,7 @@
     "react-hook-form": "^6.12.1",
     "react-html2pdf": "^1.0.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.1",
+    "react-scripts": "^4.0.1",
     "web-vitals": "^0.2.4",
     "yup": "^0.32.1"
   },

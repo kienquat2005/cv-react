@@ -12,13 +12,15 @@ body {
 
 .left {
   background-color: #fff;
-  width: 25vw;
+  width: 25vw; 
+  margin-right: 20px;
 }
 
 .right {
   width: 75vw;
   min-height: 100vh;
   font-family: "Lora", serif;
+  margin-left: 50px;
 }
 
 .right p {

@@ -75,7 +75,7 @@ img {
 .basic {
   background-color: #fff;
     width: 25vw;
-  
+    display: flex;
 }
 .gender{
   padding: 18.5px 14px;

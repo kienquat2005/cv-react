@@ -1,11 +1,15 @@
 import './App.css';
 import Basic from 'components/mainLeft/basic';
+import Paper from 'components/mainRight/paper/Paper';
+import Login from 'components/login/login';
+import Admin from 'components/admin/admin';
+import Register from 'components/login/register';
 import { BrowserRouter, Router, Route, Switch, Link } from 'react-router-dom';
 import ContentProvider from '../contexts/context';
-import Right from 'components/mainRight/right';
 import { Button, makeStyles } from '@material-ui/core';
 import logo from '../asset/logoCV.jpg';
 import logoClick from '../asset/logoClick.jpg';
+
 
 function Templates() {
   const useStyles = makeStyles({
@@ -17,7 +21,6 @@ function Templates() {
   });
   const classes = useStyles();
   
-
 return (
   <div className= "left">
       <div className='headerLeft'>
@@ -45,13 +48,14 @@ function App() {
         <ContentProvider>
           <BrowserRouter>
             <Switch> 
-              <Route path="/" component={Templates} exact />
-              <Route path="/basic" component={Basic} />
+              <Route path="/" component={Login} exact />
+              <Route path="/admin" component={Admin}  />
+              <Route path="/admin/viewCv/:id" component={Paper}  />
+              <Route path="/register" component={Register} exact />
+              <Route path="/basic" component={Basic} exact />
             </Switch>
           </BrowserRouter>
-      <Right />
       </ContentProvider>
-
     </div>
   );
 }

@@ -33,7 +33,7 @@ function Right() {
 
   const handleDeleteDate = (event) => {
     event.preventDefault();
-    localStorage.clear();
+    localStorage.removeItem('dataLocal');
     setContent({
       header: {},
       experience: { descrition: ['', '', ''], descrition2: ['', ''] },
